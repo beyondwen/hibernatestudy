@@ -17,7 +17,7 @@ public class Employee1 {
         transaction.begin();
         session.save(employee);
         transaction.commit();
-        session.close();
+        //session.close();
     }
 
     public Employee get() {

@@ -24,15 +24,18 @@ public class EmployeeServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Employee employee = new Employee();
+        employee.setId(1);
+        employee.setName("wenhao11111");
         Transaction transaction = session.getTransaction();
         transaction.begin();
-        Integer integer = 1;
-        Employee employee = session.get(Employee.class, integer);
-        System.out.println(employee);
+        Employee employee1 = session.get(Employee.class, 1);
+        System.out.println(employee.hashCode());
+        System.out.println(employee1.hashCode());
         employee.setName("ceshi22");
         employee.setPassword("122");
-        session.update(employee);
-        //employee1.save(employee);
+        employee1.setName(employee.getName());
+        session.update(employee1);
         transaction.commit();
         req.setAttribute("employee", employee);
         req.getRequestDispatcher("/index.jsp").forward(req, resp);

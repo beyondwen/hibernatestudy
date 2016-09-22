@@ -5,15 +5,9 @@ import javax.persistence.*;
 /**
  * Created by Administrator on 2016/9/22 0022.
  */
-@Entity
-@Table(name = "t_product")
 public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(name = "name")
     private String name;
-    @Column(name = "password")
     private String password;
 
     public Integer getId() {

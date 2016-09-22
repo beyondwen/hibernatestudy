@@ -21,7 +21,7 @@ public class Employee1Test {
     public void save() throws Exception {
         Employee employee = new Employee();
         employee.setName("fsfsd");
-        employee.setPassword("32423");
+        employee.setPassword("32423111");
         employee1.save(employee);
     }
 

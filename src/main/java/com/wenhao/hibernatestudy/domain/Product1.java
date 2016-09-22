@@ -1,23 +1,20 @@
 package com.wenhao.hibernatestudy.domain;
 
-import java.io.Serializable;
+import javax.persistence.*;
 
 /**
  * Created by Administrator on 2016/9/22 0022.
  */
-public class Employee implements Serializable {
+@Entity
+@Table(name = "t_product")
+public class Product1 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "password")
     private String password;
-    private Product1 product;
-
-    public Product1 getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product1 product) {
-        this.product = product;
-    }
 
     public Integer getId() {
         return id;
@@ -41,14 +38,5 @@ public class Employee implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                '}';
     }
 }

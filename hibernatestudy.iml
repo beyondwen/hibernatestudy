@@ -19,7 +19,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="foo" />
-          <unit-entry name="hibernate.cfg.xml" />
+          <unit-entry name="hibernate.cfg.xml" value="f2eb9642-efb8-464d-8bcb-f396c033e4ea" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
@@ -57,5 +57,6 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:6.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-jpamodelgen:5.2.2.Final" level="project" />
     <orderEntry type="library" name="servlet-api" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

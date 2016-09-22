@@ -1,20 +1,22 @@
 package com.wenhao.hibernatestudy.domain;
 
+import javax.persistence.*;
+
 /**
  * Created by Administrator on 2016/9/22 0022.
  */
 public class Employee {
-    private int id;
+    private Integer id;
     private String name;
     private String password;
-    public int getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
-
 
     public String getName() {
         return name;

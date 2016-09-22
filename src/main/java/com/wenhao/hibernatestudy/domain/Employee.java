@@ -10,6 +10,15 @@ public class Employee implements Serializable {
     private Integer id;
     private String name;
     private String password;
+    private Product product;
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public Integer getId() {
         return id;

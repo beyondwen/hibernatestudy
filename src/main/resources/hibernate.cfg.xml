@@ -18,6 +18,11 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <!--是否格式化sql-->
         <property name="format_sql">true</property>
+        <!--建表策略-->
+        <property name="hbm2ddl.auto">validate</property>
+        <!--使用xml-->
         <mapping resource="domain/Employee.hbm.xml"/>
+        <!--使用注解-->
+        <mapping class="com.wenhao.hibernatestudy.domain.Product"/>
     </session-factory>
 </hibernate-configuration>

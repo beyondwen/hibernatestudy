@@ -14,11 +14,14 @@ import org.hibernate.mapping.MetadataSource;
  */
 public class EmployeeTest {
     public void save() {
+        Configuration configuration = new Configuration().configure();
+        SessionFactory sessionFactory = configuration.buildSessionFactory();
+
         Employee employee = new Employee();
         employee.setName("wenhao");
         employee.setPassword("123456");
-        StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-        SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+        // StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
+        //SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
         Session session = sessionFactory.openSession();
         session.save(employee);
         session.close();

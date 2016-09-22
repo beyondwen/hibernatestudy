@@ -1,11 +1,12 @@
 package com.wenhao.hibernatestudy.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Administrator on 2016/9/22 0022.
  */
-public class Employee {
+public class Employee implements Serializable {
     private Integer id;
     private String name;
     private String password;
@@ -32,5 +33,14 @@ public class Employee {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
